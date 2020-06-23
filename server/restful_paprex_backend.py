@@ -6,8 +6,8 @@ import json
 
 import time
 
-import user_def_utils.test_mod as tmod
-import task_answer_formatting.task_answer_formatting as taf
+import server.user_def_utils.test_mod as tmod
+import server.task_answer_formatting.task_answer_formatting as taf
 
 ## Using code from https://github.com/narenaryan/Salary-API as starting template
 
