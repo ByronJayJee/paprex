@@ -1,1 +1,1 @@
-web gunicorn server.restful_paprex_backend:app
+web python server/restful_paprex_backend.py
