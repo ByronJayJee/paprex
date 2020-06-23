@@ -74,4 +74,5 @@ api.add_resource(Hey_You, '/api/hey/<string:user_name>')
 
 
 if __name__ == '__main__':
-     app.run(port='5002')
+     app.run()
+     #app.run(port='5002')
