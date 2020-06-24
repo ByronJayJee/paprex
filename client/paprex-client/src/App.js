@@ -17,7 +17,7 @@ function App() {
   const [currentServerStatus, setServerStatus] = useState('...Waiting for PaPreX Server...');
   const [currentPmidList, setPmidList] = useState([{pmid: 23456789}]);
   const [currentQAResults, setQAResults] = useState('...Waiting for results...');
-  const [currentQAResultsJSON, setQAResultsJSON] = useState([{'task': 'Test Task', 'questions': [{'question': 'Test Question?', 'summary_answer': '', 'summary_context': '', 'results': [{'context': 'test context', 'answer': 'test answer', 'start_index': 2, 'end_index': 4, 'title': 'test title', 'pmid': 123456789}]}]}]);
+  const [currentQAResultsJSON, setQAResultsJSON] = useState([{'task': 'Test Task', 'questions': [{'question': 'Test Question?', 'summary_answer': '', 'summary_context': '', 'results': [{'context': 'test context', 'answer': 'test answer', 'start_index': 0, 'end_index': 0, 'title': 'test title', 'pmid': 123456789}]}]}]);
 
   const handleFormSubmit = (event) => {
     console.log(`

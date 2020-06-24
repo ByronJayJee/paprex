@@ -16,14 +16,39 @@ const TaskHighlightAnswer = ({ task_result }) => {
   )
 };
 
-const TaskResults = ({ task_results }) => {
+const TaskPrintResults = ({ result }) => {
+  const start_idx = result.start_index
+  const end_idx = result.end_index
+  const context_len = result.context.length
+  const whole_context = (start_idx == 0) && (context_len == end_idx)
+  const no_context = (start_idx == 0) && (end_idx == 0)
+
+  if (whole_context || no_context){
+    return('')
+  }
   return (
     <>
-      {task_results.map((result) => (
+      {
+      [<h3 class='single_answer'>{result.title}</h3>,
+      <h3 class='single_answer'>[Article PMID: {result.pmid}]</h3>,
+      <h3 class='single_answer'>[Answer: {result.answer}]</h3>,
+      <TaskHighlightAnswer task_result={result} />]
+      }
+    </>
+  )
+};
+
+const TaskResults = ({ task_results }) => {
+	/*
         [<h3 class='single_answer'>{result.title}</h3>,
         <h3 class='single_answer'>[Article PMID: {result.pmid}]</h3>,
         <h3 class='single_answer'>[Answer: {result.answer}]</h3>,
         <TaskHighlightAnswer task_result={result} />]
+	*/
+  return (
+    <>
+      {task_results.map((result) => (
+	<TaskPrintResults result={result} />
       ))}
     </>
   )
