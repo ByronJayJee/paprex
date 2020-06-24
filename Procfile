@@ -1,1 +1,1 @@
-web gunicorn wsgi:app
+web ./run_server_gunicorn.sh
