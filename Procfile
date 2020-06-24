@@ -1,1 +1,1 @@
-web bash ./run_server.sh
+web bash ./run_server_gunicorn.sh
