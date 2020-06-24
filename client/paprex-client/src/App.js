@@ -35,7 +35,7 @@ function App() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ post: 'test send' }),
+      //body: JSON.stringify({ post: 'test send' }),
     });
     //const body = await response.text();
     const json = await response.json();
